@@ -48,3 +48,7 @@ CHROME_PATH="/path/to/Google Chrome for Testing" npm test
 ```
 
 E2E テストは、拡張を読み込んだ Chrome をヘッドレスで起動して確かめます。通常の Google Chrome はコマンドラインからの拡張の読み込みを受け付けないので、[Chrome for Testing](https://googlechromelabs.github.io/chrome-for-testing/) を使ってください (`npx @puppeteer/browsers install chrome@stable` で入ります)。
+
+## ライセンス
+
+[0BSD](LICENSE)
