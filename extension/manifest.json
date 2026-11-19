@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "gengoro",
+  "version": "0.1.0",
+  "description": "クリックするたびに、今のタブの優先言語 (Accept-Language と navigator.languages) を順繰りに切り替える",
+  "permissions": ["declarativeNetRequest", "storage", "scripting", "webNavigation", "contextMenus"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": { "default_title": "gengoro: クリックで優先言語を切り替え", "default_icon": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png", "128": "icons/128.png" } },
+  "icons": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png", "128": "icons/128.png" },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["navigator.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    }
+  ],
+  "options_ui": { "page": "options.html", "open_in_tab": false }
+}

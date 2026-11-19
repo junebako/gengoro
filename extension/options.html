@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>gengoro の設定</title>
+  <style>
+    body { font: 14px/1.6 system-ui, sans-serif; margin: 16px; min-width: 360px; }
+    input { font: inherit; width: 100%; box-sizing: border-box; padding: 6px 8px; }
+    p { margin: 6px 0; color: #555; }
+    #status { color: #2b8a3e; min-height: 1.6em; }
+  </style>
+</head>
+<body>
+  <label for="languages"><strong>切り替える言語</strong> (カンマか空白区切り、順繰りの順番)</label>
+  <input id="languages" placeholder="ja, en">
+  <p>例: <code>ja, en</code> / <code>ja, en, zh-TW</code></p>
+  <button id="save">保存</button>
+  <div id="status"></div>
+  <script type="module" src="options.js"></script>
+</body>
+</html>
